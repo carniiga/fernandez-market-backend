@@ -18,17 +18,5 @@
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.0.1"
-  },
-  "devDependencies": {
-    "prisma": "^5.4.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/carniiga/fernandez-market-backend.git"
-  },
-  "bugs": {
-    "url": "https://github.com/carniiga/fernandez-market-backend/issues"
-  },
-  "homepage": "https://github.com/carniiga/fernandez-market-backend#readme",
-  "description": ""
+  }
 }
