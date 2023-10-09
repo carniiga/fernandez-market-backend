@@ -1,7 +1,6 @@
 {
   "name": "fernandez-market",
   "version": "1.0.0",
-  "description": "",
   "main": " index.js",
   "type": "module",
   "scripts": {
@@ -22,5 +21,14 @@
   },
   "devDependencies": {
     "prisma": "^5.4.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carniiga/fernandez-market-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carniiga/fernandez-market-backend/issues"
+  },
+  "homepage": "https://github.com/carniiga/fernandez-market-backend#readme",
+  "description": ""
 }
