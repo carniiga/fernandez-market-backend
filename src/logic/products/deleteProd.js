@@ -1,7 +1,7 @@
-import prisma from "../../server/app.js"
+import {prismaConnect} from "../../server/app.js"
 
 export const productDelete = async(id) => {
-    const deleteProd = await prisma.product.findUnique({
+    const deleteProd = await prismaConnect().product.findUnique({
         where :{id : id}
     })
     if(deleteProd){

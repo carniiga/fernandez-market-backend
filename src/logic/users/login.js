@@ -1,11 +1,11 @@
 
-import prisma from "../../server/app.js";
+import {prismaConnect} from "../../server/app.js";
 import { passwordDecode } from "./hash/PasswordHash.js";
 import { genToken } from "./token/userToken.js";
 
 
 export const findUserAndLogin = async(email,password) => {
-    const userFound = await prisma.user.findUnique({
+    const userFound = await prismaConnect().user.findUnique({
         where : {email : email}
     })
    

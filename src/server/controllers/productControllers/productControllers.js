@@ -1,17 +1,17 @@
 
-import prisma from "../../app.js";
+import {prismaConnect} from "../../app.js";
 import { createProd} from "../../../logic/products/createProd.js";
 import { updateProd } from "../../../logic/products/updateProd.js";
 import { productDelete } from "../../../logic/products/deleteProd.js";
 
 export const getAllProdsCtrl = async (req ,res) => {
-    const getAllProdcts = await prisma.product.findMany()
+    const getAllProdcts = await prismaConnect().product.findMany()
     res.send(getAllProdcts)
 };
 export const getProductById = async(req , res) => {
     const {productId}= req.params;
   
-    const productFoundId = await prisma.product.findUnique({
+    const productFoundId = await prismaConnect().product.findUnique({
         where: {
             id : productId
         },
