@@ -8,7 +8,7 @@ app.use(express.json())
 app.use("/", userRouter)
 app.use("/", productRouter)
 app.listen(port ,() => {
-    prismaConnect().$connect()
+    prismaConnect()
     console.log(`listening on port ${port}`)
     
     
