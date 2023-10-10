@@ -10,6 +10,6 @@ let prismaClient;
 export const prisma = new PrismaClient();
 
 export const prismaConnect = () => {
-    prismaClient = new PrismaClient()
+    prismaClient = new PrismaClient
 }
 
