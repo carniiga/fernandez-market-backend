@@ -9,3 +9,7 @@ export const app = express()
 
 export const prisma = new PrismaClient();
 
+export const prismaConnect = () => {
+    return new PrismaClient()
+}
+
