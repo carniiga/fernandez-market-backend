@@ -1,8 +1,8 @@
-import {prismaConnect} from "../../server/app.js"
+import {prisma} from "../../server/app.js"
 
 export const updateProd = async (product , id ) => {
 
-    const productUpdate = await prismaConnect().product.update({
+    const productUpdate = await prisma.product.update({
         where : {id : id},
         data  : product
     })

@@ -1,4 +1,4 @@
-import {prismaConnect} from "../../server/app.js";
+import {prisma} from "../../server/app.js";
 import { passwordHash } from "./hash/PasswordHash.js";
 
 
@@ -7,7 +7,7 @@ import { passwordHash } from "./hash/PasswordHash.js";
 export const registerUser = async(user) => {
     const {userName , email ,password} = user
     const passwordHased = await passwordHash(password) 
-    const userRegisterDb = await prismaConnect().user.findUnique({
+    const userRegisterDb = await prisma.user.findUnique({
         where : {email : email},
     })
     if(!userRegisterDb){

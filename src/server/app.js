@@ -1,4 +1,4 @@
-import {  PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import express from "express"
 
 
@@ -7,8 +7,5 @@ import express from "express"
 export const app = express()
 
 
-export const prismaConnect = () => {
-    const connect =   new PrismaClient();
-    return connect
-}
+export const prisma = new PrismaClient();
 

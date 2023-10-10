@@ -1,8 +1,8 @@
-import {prismaConnect} from "../../server/app.js"
+import {prisma} from "../../server/app.js"
 
 
 export const createProd = async (product) => {
- const create = await prismaConnect().product.create({data : product})
+ const create = await prisma.product.create({data : product})
  return create
 }
 
