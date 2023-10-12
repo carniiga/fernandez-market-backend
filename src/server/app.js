@@ -10,7 +10,7 @@ export const app = express()
 export const prisma = new PrismaClient();
 
 export const prismaConnect = () => {
-     const connect = prismaClient = new PrismaClient()
+     const connect = PrismaClient = new PrismaClient()
      return connect
 }
 

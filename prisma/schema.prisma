@@ -9,10 +9,10 @@ datasource db {
 }
 
 model Product {
-  id          String   @id
+  id          String   @unique @default(uuid())
   productName String   @db.VarChar(255)
   created_at  DateTime @default(now())
-  updatedAt   DateTime
+  updatedAt   DateTime @updatedAt
   category    String   @db.VarChar(55)
   description String   @db.VarChar(255)
   price       Int
