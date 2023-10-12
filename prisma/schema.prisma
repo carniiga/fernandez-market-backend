@@ -20,11 +20,11 @@ model Product {
 }
 
 model User {
-  id         String   @id
+  id         String   @unique @default(uuid())
   email      String   @unique
   password   String
   created_at DateTime @default(now())
-  updatedAt  DateTime
+  updatedAt  DateTime @updatedAt
   userName   String?
   rol        String
 }

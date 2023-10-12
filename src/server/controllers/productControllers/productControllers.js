@@ -30,10 +30,10 @@ export const updateProductCtrl = async(req, res) => {
     if(productInput.price) {
        const priceFixed =  await updateProd(productInput , id)
        res.status(200).send(priceFixed)
-        return
+        return  
     }
     const productUpdate = await updateProd(productInput , id )
-    res.status(200).send(productUpdate)
+     res.send(productUpdate)
 };
 
 export const deleteProductCtrl = async (req , res ) => {  
