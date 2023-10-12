@@ -1,7 +1,6 @@
 
 import {prisma} from "../../server/app.js";
 import { passwordDecode } from "./hash/PasswordHash.js";
-import { genToken } from "./token/userToken.js";
 
 
 export const findUserAndLogin = async(email,password) => {
