@@ -6,7 +6,8 @@ export const  genToken = async(email, password , rol) => {
 }
 
 export const decodeToken = async (token) => {
-    const tokenClean= token.slice(7)
+    const tokenClean = token.slice(7)
+    console.log(tokenClean)
     const decoded =  Jwt.verify(tokenClean,process.env.SECRET_KEY)
     const rol = decoded.email.rol
     return rol
