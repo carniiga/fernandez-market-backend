@@ -12,6 +12,6 @@ export const decodeToken = async (token) => {
     const rol = decoded.email.rol
     return rol
     
-    
+
     
 }
