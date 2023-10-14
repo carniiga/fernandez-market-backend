@@ -17,6 +17,7 @@ model Product {
   description String   @db.VarChar(255)
   price       Int
   quantity    Int
+  imgUrl  String 
 }
 
 model User {
