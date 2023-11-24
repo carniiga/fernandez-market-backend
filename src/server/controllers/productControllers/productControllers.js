@@ -6,7 +6,7 @@ import { productDelete } from "../../../logic/products/deleteProd.js";
 
 export const getAllProdsCtrl = async (req ,res) => {
     const getAllProdcts = await prisma.product.findMany()
-    res.send(getAllProdcts)
+    console.log(getAllProdcts)
 };
 export const getProductById = async(req , res) => {
     const {productId}= req.params;
