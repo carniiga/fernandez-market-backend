@@ -17,7 +17,7 @@ model Product {
   description String   
   price       Int
   quantity    Int
-  imgUrl      String 
+  imgUrl  String
 }
 
 model User {
@@ -28,4 +28,8 @@ model User {
   updatedAt  DateTime @updatedAt
   userName   String?
   rol        String
+}
+model Images {
+  id   String   @unique @default(uuid())
+  image String
 }
